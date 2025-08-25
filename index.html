@@ -11,22 +11,23 @@
     <head>
       <img class="epicodeLogo" src="./assets/img/epicode_logo.png" alt="epicode_logo" />
     </head>
-    <main>
-      <h1>Welcome to <strong>your exam</strong></h1>
-      <h4>Instruction</h4>
+    <main class="mainSet">
+      <h1 class="title">Welcome to <br />your exam</h1>
+      <h4 class="subTitle">Instruction</h4>
       <p>We don't expect most engineers to know the answers to all of these questions, so don't worry if you're unsure of a few of them.</p>
-      <ul>
+      <ul class="rulesList">
         <li>Each question is timed and can only be answered once.</li>
         <li>Changing browser tab or opening other windows will invalidate the question.</li>
         <li>This exam will take approx. 0 - 5 minutes.</li>
       </ul>
+
+      <section class="sectionSet">
+        <input type="checkbox" id="promiseCheck" />
+        <label for="promiseCheck">I promise to answer myself without help from anyone</label>
+        <div class="startButton">
+          <button>PROCEED</button>
+        </div>
+      </section>
     </main>
-    <section>
-      <input type="checkbox" id="promiseCheck" />
-      <label for="promiseCheck">I promise to answer myself without help from anyone</label>
-      <div>
-        <button>PROCEED</button>
-      </div>
-    </section>
   </body>
 </html>
