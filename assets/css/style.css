@@ -1,16 +1,16 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-size: 1rem;
-    line-height: 1.6;
-    background-image: url("../img/bg.jpg");
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  /* background-image: url("../img/bg.jpg"); */
 }
 
-.container{
-    max-width: 1200px;
-    padding: 0 3.6rem;
+.container {
+  max-width: 1200px;
+  padding: 0 3.6rem;
 }
