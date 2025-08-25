@@ -1,0 +1,20 @@
+#header-question div,
+#header-question p {
+  display: inline-block;
+}
+#header-question div {
+  width: calc(50% - 10px);
+}
+
+#header-question {
+}
+#logo {
+  text-align: left;
+}
+#timer {
+  text-align: right;
+}
+
+#logo img {
+  width: 70px;
+}
