@@ -27,6 +27,40 @@
   line-height: 1;
 }
 .rulesList {
-  padding-top: 1em;
+  padding-top: 3em;
   font-size: 1.6em;
+  padding-left: 3em;
+}
+.sectionSet {
+  padding-top: 9em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sectionSet label {
+  font-size: 2em;
+}
+
+input {
+  width: 2em;
+  height: 2em;
+  margin-right: 1em;
+  border: 3px solid white;
+  cursor: pointer;
+  appearance: none;
+}
+input[type="checkbox"] {
+  background-color: transparent;
+}
+.startButton button {
+  color: black;
+  background-color: #01ffff;
+  padding-block: 0.5em;
+  font-size: 2em;
+  padding-inline: 1em;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-left: 0em;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 10px #01ffff;
 }
