@@ -6,3 +6,27 @@
 
   width: 15em;
 }
+.mainSet {
+  padding-inline: 5em;
+}
+.title {
+  line-height: 0.8;
+  font-size: 7em;
+  padding-top: 0.5em;
+  font-weight: normal;
+}
+.subTitle {
+  font-size: 3em;
+  padding-left: 1em;
+  padding-top: 1em;
+  color: #c2138d;
+}
+.mainSet p {
+  padding-top: 1em;
+  font-size: 1.6em;
+  line-height: 1;
+}
+.rulesList {
+  padding-top: 1em;
+  font-size: 1.6em;
+}
