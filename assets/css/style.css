@@ -7,19 +7,24 @@
 body {
   font-family: "Montserrat", Arial, sans-serif;  
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.4;
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
-  
-  
-   
+  color: #fff;
 }
 
 .container {
   max-width: 1200px;
   margin-inline: auto;
   padding: 0 3.6rem;
+}
+
+
+/* classe riutilizzabili */
+
+.text-center{
+  text-align: center;
 }
