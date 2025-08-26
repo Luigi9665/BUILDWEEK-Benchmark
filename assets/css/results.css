@@ -1,3 +1,5 @@
+
+/* Header */
 header {
     padding: 3rem 0 5rem 0;
     max-width: 1200px;
@@ -55,7 +57,7 @@ header {
     padding-left: 2.6rem;
 }
 
-
+/* Circle with 2 different colors */
 .stats-box-circle {
     position: relative;
     height: 25rem;
@@ -81,6 +83,7 @@ header {
     background-position: right;
 }
 
+/* Title description box with absolute posistion */
 .position-absolute {
     width: 100%;
     padding: 0 4rem;
@@ -125,24 +128,25 @@ header {
 .rating{
     margin: 2rem 0 4rem 0;
 }
-
+/* stars */
 .star {
   font-size: 5rem;
   cursor: pointer;
   color: #757575;
   transition: color 0.2s;
 }
-
+/* star hover, active */
 .star:active, .star:hover {
     color: #00FFFF; 
 }
 
-
+/* Title and description box */
 .feedback-box{
     display: inline-block;
     width:51rem;
 }
 
+/* comment input */
 input[type="text"]{
     width: 100%;
     font-size: 1.2rem;
@@ -159,7 +163,7 @@ input[type="text"]:focus{
 }
 
 
-/* feedback page button */
+/* Reused button for welcome and feedback pages */
 .btn-general{
     font-size: 1.5rem;
     font-weight: 600;
@@ -174,7 +178,7 @@ input[type="text"]:focus{
 }
 
 
-
+/* before */
 .btn-general::before{
     content: "";
     position: absolute;
