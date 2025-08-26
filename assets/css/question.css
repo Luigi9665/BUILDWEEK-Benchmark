@@ -16,12 +16,16 @@
 }
 
 #logo img {
-  width: 90px;
+  width: 150px;
   padding-bottom: 10px;
+}
+
+main {
+  margin-block: 315px;
 }
 .question {
   margin-block: 130px 50px;
-  width: 375px;
+  width: 540px;
   margin-inline: auto;
   text-align: center;
   color: white;
@@ -29,40 +33,50 @@
   line-height: 30px;
 }
 .question h1 {
+  font-size: 60px;
   font-weight: 500;
-  line-height: 30px;
+  line-height: 60px;
 }
 
 .answers {
   margin-bottom: 150px;
+  text-align: center;
 }
 
 .answer {
   display: inline-block;
-  width: calc(50% - 20px);
+  width: calc(40%);
   border-radius: 20px;
   height: 50px;
   margin: 0px 10px 15px 0;
-  position: relative;
 }
 
+/* BUTTON CON MASK E POSITION RELATIVE & ABSOLUTE, BORDO CON GRADIENT MA POCA DISSOLVENZA */
 button {
-  border-radius: 20px;
+  position: relative;
+  border: none;
+  border-radius: 30px;
   width: 100%;
   height: 100%;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.04);
   color: white;
-  /* background: rgba(255, 255, 255, 0.08); */
-  background: conic-gradient(from 120deg, #00ffff 0% 66.7%, #e843c4 66.7% 100%);
+  cursor: pointer;
+  z-index: 0;
 }
-
 button::before {
   content: "";
   position: absolute;
-  top: 2.5rem;
-  left: 2.5rem;
-  right: 2.5rem;
-  bottom: 2.5rem;
-  border-radius: 20px;
+  inset: 0;
+  border-radius: 30px;
+  padding: 2px;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0) 100%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .check {
@@ -72,7 +86,7 @@ button::before {
   text-align: right;
 }
 #button-next button {
-  height: 30px;
+  height: 50px;
   width: 100px;
 }
 
