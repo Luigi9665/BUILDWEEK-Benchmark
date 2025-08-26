@@ -56,7 +56,7 @@ body {
 }
 
 .sectionSet {
-  margin: 9rem 0 5rem 0;
+  margin: 5rem 0 3rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -121,7 +121,7 @@ input[type="checkbox"] {
 }
 
 .question {
-  margin: 2rem 0 4rem 0;
+  margin-bottom: 3.3rem;
   max-width: 900px;
   margin-inline: auto;
   text-align: center;
@@ -137,7 +137,7 @@ input[type="checkbox"] {
 }
 
 .answers {
-  margin-bottom: 150px;
+  margin-bottom: 7rem;
   text-align: center;
 }
 
@@ -259,7 +259,7 @@ input[type="checkbox"] {
 
 /* Header */
 .myheader {
-  padding: 3rem 0 5rem 0;
+  padding: 3rem 0 4rem 0;
   max-width: 1200px;
   margin-inline: auto;
 }
@@ -370,7 +370,7 @@ input[type="checkbox"] {
   color: #fff;
   border: 3px solid #fff;
   box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   cursor: pointer;
 }
 
