@@ -1,5 +1,8 @@
+/* Header */
 header {
-    padding: 3rem 0 2rem 7rem;
+    padding: 3rem 0 5rem 0;
+    max-width: 1200px;
+    margin-inline: auto;
 }
 
 
@@ -8,7 +11,7 @@ header {
     width: 12rem;
 }
 
-
+/* Results page styling */
 .primary-text-box-title {
     font-size: 3rem;
 }
@@ -17,6 +20,7 @@ header {
     font-size: 1.8rem;
     font-weight: 400;
     color: #E9E5EC;
+    margin-top: 1rem;
 }
 
 
@@ -52,7 +56,7 @@ header {
     padding-left: 2.6rem;
 }
 
-
+/* Circle with 2 different colors */
 .stats-box-circle {
     position: relative;
     height: 25rem;
@@ -78,6 +82,7 @@ header {
     background-position: right;
 }
 
+/* Title description box with absolute posistion */
 .position-absolute {
     width: 100%;
     padding: 0 4rem;
@@ -101,18 +106,86 @@ header {
 }
 
 
-
+/* results page button */
 .btn-rate {
-    margin-bottom: 5rem;
-    font-size: 1.2rem;
-    width: 16rem;
+    font-size: 1.5rem;
     font-weight: 600;
+    width: 16rem;
+    height: 4rem;
     text-transform: uppercase;
     background-color: transparent;
     color: #fff;
     border: 3px solid #fff;
-    cursor: pointer;
-    padding: 1.5rem 2rem;
     box-shadow: 0 5px 10px rgba(255, 255, 255, 0.20);
+    margin-bottom: 5rem;
+    cursor: pointer;    
+}
 
+
+/* Feedback page styling */
+
+.rating{
+    margin: 2rem 0 4rem 0;
+}
+/* stars */
+.star {
+  font-size: 5rem;
+  cursor: pointer;
+  color: #757575;
+  transition: color 0.2s;
+}
+/* star hover, active */
+.star.active, .star:hover {
+    color: #00FFFF; 
+}
+
+/* Title and description box */
+.feedback-box{
+    display: inline-block;
+    width:51rem;
+}
+
+/* comment input */
+input[type="text"]{
+    width: 100%;
+    font-size: 1.2rem;
+    margin: 3rem 0 4rem 0;
+    padding: 8px 16px;
+    border: none;
+    border-bottom: 2px solid #C2128D;
+    background: transparent;
+    color: #E9E5EC;
+}
+
+input[type="text"]:focus{
+    outline: none;
+}
+
+
+/* Reused button for welcome and feedback pages */
+.btn-general{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 16rem;
+    height: 4rem;
+    background-color: #00FFFF;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+
+/* before */
+.btn-general::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius: 25px;
+    /* box-shadow: 0 0 10px 15px rgba(0,255,255, 0.25); */
+    box-shadow: 0 0 13px 16px rgba(0,255,255, 0.27);
 }
