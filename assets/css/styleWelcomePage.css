@@ -54,26 +54,6 @@ input[type="checkbox"] {
   background-color: transparent;
 }
 
-/* .startButton {
-  padding-right: 3em;
-  font-family: "Montserrat", Arial, sans-serif;
-}
-.startButton button {
-  color: black;
-  border: none;
-  background-color: #01ffff;
-  padding-block: 0.5em;
-  font-size: 2em;
-  padding-inline: 2em;
-  font-weight: bold;
-  vertical-align: middle;
-  margin-left: 0em;
-  cursor: pointer;
-  box-shadow: rgb(1, 255, 255) 0px 0px 43px 0px;
-  height: 2.3em;
-  width: 9em;
-} */
-
 .btn-general {
   font-size: 1.5rem;
   font-weight: 600;
