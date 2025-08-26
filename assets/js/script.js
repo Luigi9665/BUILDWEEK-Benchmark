@@ -11,7 +11,7 @@ const divQuestion = document.querySelector(".question");
 let totalTime = 30; // secondi totali
 let remaining = totalTime; //secondi che dovranno diminuire
 const secondEl = document.querySelector(".second");
-const circleEl = document.getElementById("circle-timer");
+const circleEl = document.getElementById("timer");
 
 //settaggio footer per numero totale delle domande e numero della domanda in esecuzione
 const numberQuestion = (amount) => {

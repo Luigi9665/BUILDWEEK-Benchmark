@@ -1,16 +1,14 @@
-#logo,
-#timer {
-  display: inline-block;
-  margin-top: 3px;
-  width: calc(50% - 10px);
+#header-question {
+  max-width: 1200px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
 }
 
 #logo {
   text-align: left;
   height: 100%;
-}
-#timer {
-  text-align: right;
 }
 
 #logo img {
@@ -19,7 +17,7 @@
 }
 
 main {
-  margin-block: 315px;
+  margin-block: 285px;
 }
 .question {
   margin-block: 130px 50px;
@@ -102,10 +100,14 @@ button::before {
   font-size: 1rem;
   color: #9f1282;
 }
+/* #position-second {
+  line-height: 15px;
+  text-align: center;
+} */
 
-#circle-timer {
-  color: white;
-  display: inline-block;
+#timer {
+  text-align: center;
+  color: #ede8ee;
   position: relative;
   height: 5rem;
   width: 5rem;
@@ -113,7 +115,28 @@ button::before {
   background: conic-gradient(from 90deg, #00ffff 0deg 360deg, rgba(255, 255, 255, 0.1));
 }
 
-#inner-circle {
+#timer::before {
+  content: "";
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  top: 8px;
+  left: 8px;
+  border-radius: 50%;
+  background-image: url("../img/bg.jpg");
+  /* background: rgba(103, 38, 116, 0.9); */
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: right;
+}
+#position-second {
+  padding-top: 15px;
+  position: relative;
+  z-index: 9999;
+  line-height: 15px;
+}
+
+/* #inner-circle {
   position: absolute;
   width: 80%;
   height: 80%;
@@ -129,7 +152,7 @@ button::before {
   align-items: center;
   justify-content: center;
   z-index: 1;
-}
+} */
 
 .text-timer {
   font-size: 5px;
@@ -137,11 +160,6 @@ button::before {
 
 .second {
   font-size: 25px;
-}
-
-#position-second {
-  line-height: 15px;
-  text-align: center;
 }
 
 /* .stats-box-circle {

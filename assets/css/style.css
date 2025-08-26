@@ -17,8 +17,7 @@ body {
   padding-inline: 30px;
 }
 
-/* .container {
+.container {
   max-width: 1200px;
   margin-inline: auto;
-  padding: 0 3.6rem;
-} */
+}
