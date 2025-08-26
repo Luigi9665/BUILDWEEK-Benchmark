@@ -4,7 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/styleWelcomePage.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <head>
+      <img class="epicodeLogo" src="./assets/img/epicode_logo.png" alt="epicode_logo" />
+    </head>
+    <main class="mainSet">
+      <h1 class="title">Welcome to <br /><strong>your exam</strong></h1>
+      <h4 class="subTitle">Instruction</h4>
+      <p>
+        We don't expect most engineers to know the answers to all of these <br />
+        questions, so don't worry if you're unsure of a few of them.
+      </p>
+      <ul class="rulesList">
+        <li>Each question is <strong>timed</strong> and can only <strong>be answered once</strong>.</li>
+        <li>Changing browser tab or opening other windows will <strong>invalidate the question</strong>.</li>
+        <li>This exam will take approx. <strong>0 - 5 minutes</strong>.</li>
+      </ul>
+
+      <section class="sectionSet">
+        <div>
+          <input type="checkbox" id="promiseCheck" name="promiseCheck" />
+          <label for="promiseCheck">I promise to answer myself without help from anyone</label>
+        </div>
+        <div class="startButton">
+          <button class="btn-general">proceed</button>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
