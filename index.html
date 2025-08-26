@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/styleWelcomePage.css" />
-    <title>Welcome</title>
-  </head>
-  <body>
-    <header>
-      <img class="epicodeLogo" src="./assets/img/epicode_logo.png" alt="epicode_logo" />
-    </header>
-    <main class="mainSet">
-      <h1 class="title">Welcome to <br /><strong>your exam</strong></h1>
-      <h4 class="subTitle">Instruction</h4>
-      <p>
-        We don't expect most engineers to know the answers to all of these <br />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Welcome</title>
+</head>
+
+<body>
+  <header class="myheader">
+    <img class="logo" src="./assets/img/epicode_logo.png" alt="epicode_logo" />
+  </header>
+  <main class="container">
+    <div>
+      <h1 class="welcome-title feedback-box">Welcome to <strong>your exam</strong></h1>
+      <h4 class="welcome-subtitle">Instruction</h4>
+      <p class="welcome-description welcome-box">
+        We don't expect most engineers to know the answers to all of these 
         questions, so don't worry if you're unsure of a few of them.
       </p>
       <ul class="rulesList">
@@ -23,16 +25,17 @@
         <li>Changing browser tab or opening other windows will <strong>invalidate the question</strong>.</li>
         <li>This exam will take approx. <strong>0 - 5 minutes</strong>.</li>
       </ul>
-
-      <div class="sectionSet">
-        <div>
-          <input type="checkbox" id="promiseCheck" name="promiseCheck" />
-          <label for="promiseCheck">I promise to answer myself without help from anyone</label>
-        </div>
-        <div class="startButton">
-          <button class="btn-general">proceed</button>
-        </div>
+    </div>
+    <div class="sectionSet">
+      <div>
+        <input type="checkbox" id="promiseCheck" name="promiseCheck" />
+        <label for="promiseCheck">I promise to answer myself without help from anyone</label>
       </div>
-    </main>
-  </body>
+      <div>
+        <button class="btn-general">proceed</button>
+      </div>
+    </div>
+  </main>
+</body>
+
 </html>

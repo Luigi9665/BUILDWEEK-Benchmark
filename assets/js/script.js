@@ -23,7 +23,7 @@ const numberQuestion = (amount) => {
 
 //generazione della domanda
 const generateQuestion = (data) => {
-  divQuestion.querySelector("h1").innerText = data[questionNumber].question;
+  divQuestion.querySelector("h1").innerHTML = data[questionNumber].question;
   const button = divQuestion.querySelectorAll(".answer");
 };
 
