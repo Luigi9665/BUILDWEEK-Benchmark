@@ -7,7 +7,7 @@
   width: 15em;
 }
 .mainSet {
-  padding-inline: 5em;
+  padding-inline: 16em;
 }
 .title {
   line-height: 0.8;
@@ -28,7 +28,7 @@
 }
 .rulesList {
   padding-top: 3em;
-  font-size: 1.6em;
+  font-size: 1.2em;
   padding-left: 3em;
 }
 .sectionSet {
@@ -38,7 +38,8 @@
   justify-content: space-between;
 }
 .sectionSet label {
-  font-size: 2em;
+  font-size: 1.2em;
+  vertical-align: text-bottom;
 }
 
 input {
@@ -52,16 +53,48 @@ input {
 input[type="checkbox"] {
   background-color: transparent;
 }
+
+/* .startButton {
+  padding-right: 3em;
+  font-family: "Montserrat", Arial, sans-serif;
+}
 .startButton button {
   color: black;
   border: none;
   background-color: #01ffff;
   padding-block: 0.5em;
   font-size: 2em;
-  padding-inline: 1em;
+  padding-inline: 2em;
   font-weight: bold;
   vertical-align: middle;
   margin-left: 0em;
   cursor: pointer;
   box-shadow: rgb(1, 255, 255) 0px 0px 43px 0px;
+  height: 2.3em;
+  width: 9em;
+} */
+
+.btn-general {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 16rem;
+  height: 4rem;
+  background-color: #00ffff;
+  color: #000;
+  border: none;
+
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-general::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  box-shadow: 0 0px 16px 13px rgba(0, 255, 255, 0.3);
 }
