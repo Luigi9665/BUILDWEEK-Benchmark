@@ -17,11 +17,11 @@
 }
 
 main {
-  margin-block: 285px;
+  margin-block: 205px;
 }
 .question {
   margin-block: 130px 50px;
-  min-width: 1080px;
+  max-width: 800px;
   margin-inline: auto;
   text-align: center;
   color: white;
@@ -42,16 +42,17 @@ main {
 .answer {
   display: inline-block;
   width: calc(40%);
-  border-radius: 20px;
-  height: 50px;
-  margin: 0px 10px 15px 0;
+  border-radius: 30px;
+  height: 90px;
+  margin: 15px 20px;
 }
 
 /* BUTTON CON MASK E POSITION RELATIVE & ABSOLUTE, BORDO CON GRADIENT MA POCA DISSOLVENZA */
 button {
+  font-size: 1.7rem;
   position: relative;
   border: none;
-  border-radius: 30px;
+  border-radius: 60px;
   width: 100%;
   height: 100%;
   padding: 10px 20px;
@@ -64,7 +65,7 @@ button::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 30px;
+  border-radius: 60px;
   padding: 2px;
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0) 100%);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
