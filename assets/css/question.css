@@ -1,8 +1,6 @@
-#header-question div,
-#header-question p {
+#logo,
+#timer {
   display: inline-block;
-}
-#header-question div {
   margin-top: 3px;
   width: calc(50% - 10px);
 }
@@ -105,6 +103,47 @@ button::before {
   color: #9f1282;
 }
 
+#circle-timer {
+  color: white;
+  display: inline-block;
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background: conic-gradient(from 90deg, #00ffff 0deg 360deg, rgba(255, 255, 255, 0.1));
+}
+
+#inner-circle {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 0.5rem;
+  left: 0.5rem;
+  border-radius: 50%;
+  background: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.text-timer {
+  font-size: 5px;
+}
+
+.second {
+  font-size: 25px;
+}
+
+#position-second {
+  line-height: 15px;
+  text-align: center;
+}
+
 /* .stats-box-circle {
     position: relative;
     height: 25rem;
@@ -112,7 +151,6 @@ button::before {
     border-radius: 50%;
     background: conic-gradient(from 120deg, #00FFFF 0% 66.7%, #E843C4 66.7% 100%);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-
 }
 
 

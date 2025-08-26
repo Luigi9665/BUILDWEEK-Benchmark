@@ -8,7 +8,12 @@ let amount = 2;
 let category = 18; // computer science / coding
 let url = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`;
 const divQuestion = document.querySelector(".question");
+let totalTime = 30; // secondi totali
+let remaining = totalTime; //secondi che dovranno diminuire
+const secondEl = document.querySelector(".second");
+const circleEl = document.getElementById("circle-timer");
 
+//settaggio footer per numero totale delle domande e numero della domanda in esecuzione
 const numberQuestion = (amount) => {
   const spanQuantity = document.getElementById("quantity-question");
   spanQuantity.innerText = `/${amount}`;
@@ -16,10 +21,26 @@ const numberQuestion = (amount) => {
   spanQuestion.innerText = `${questionNumber + 1}`;
 };
 
+//generazione della domanda
 const generateQuestion = (data) => {
   divQuestion.querySelector("h1").innerText = data[questionNumber].question;
+  const button = divQuestion.querySelectorAll(".answer");
 };
 
+//settaggio del counter domanda
+const interval = setInterval(() => {
+  remaining--;
+  if (remaining < 0) {
+    clearInterval(interval);
+    remaining = 0;
+  }
+  secondEl.textContent = remaining;
+  // Aggiorna il gradient
+  const angle = (remaining / totalTime) * 360;
+  circleEl.style.background = `conic-gradient(rgba(255,255,255,0.1) 0deg ${360 - angle}deg, #00ffff ${360 - angle}deg 360deg)`;
+}, 1000);
+
+//utilizzare il fetch per estrapolare le domande dall'url
 fetch(url)
   .then((response) => response.json())
   .then((data) => {
