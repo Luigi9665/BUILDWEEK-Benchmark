@@ -54,6 +54,7 @@ input[type="checkbox"] {
 }
 .startButton button {
   color: black;
+  border: none;
   background-color: #01ffff;
   padding-block: 0.5em;
   font-size: 2em;
@@ -62,5 +63,5 @@ input[type="checkbox"] {
   vertical-align: middle;
   margin-left: 0em;
   cursor: pointer;
-  box-shadow: 0px 0px 10px 10px #01ffff;
+  box-shadow: rgb(1, 255, 255) 0px 0px 43px 0px;
 }
