@@ -5,7 +5,7 @@ let totalTime = 30; // secondi totali
 let interval;
 let remaining = totalTime; //secondi che dovranno diminuire
 let difficulty = "easy";
-let amount = 5;
+let amount = 8;
 let category = 18; // computer science / coding
 let url = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}`;
 const divQuestion = document.querySelector(".question");
