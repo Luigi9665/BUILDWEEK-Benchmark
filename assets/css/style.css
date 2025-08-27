@@ -309,8 +309,12 @@ input[type="checkbox"] {
 }
 
 /* Circle with 2 different colors */
-.stats-box-circle {
+
+.stats-box-main {
   position: relative;
+}
+
+.stats-box-circle {
   height: 25rem;
   width: 25rem;
   border-radius: 50%;
@@ -330,10 +334,6 @@ input[type="checkbox"] {
   right: 2.5rem;
   bottom: 2.5rem;
   border-radius: 50%;
-  /* background-image: url("../img/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right; */
 }
 
 /* Title description box with absolute posistion */
