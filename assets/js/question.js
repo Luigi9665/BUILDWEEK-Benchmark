@@ -1,7 +1,7 @@
 let globalScore = 0;
 let questionNumber = 0;
 let questions = [];
-let totalTime = 5; // secondi totali
+let totalTime = 30; // secondi totali
 let interval;
 let remaining = totalTime; //secondi che dovranno diminuire
 let difficulty = "easy";
@@ -35,7 +35,7 @@ const generateQuestion = (data) => {
   if (questionNumber >= questions.length) {
     localStorage.setItem("score", globalScore);
     localStorage.setItem("numberQuestion", questionNumber);
-    // window.location.href = "results.html";          DA RIATTIVARE
+    window.location.href = "results.html";
     return;
   }
   const allAnswers = randomizeAnswers(data);
@@ -78,10 +78,6 @@ const normalize = (str) => {
 const checkCorrectAnswer = (questions) => {
   const btnCheck = document.querySelector("#check");
   const comparate = btnCheck.innerHTML;
-  console.log(questionNumber);
-  console.log(comparate);
-  console.log(questions[questionNumber - 1].correct_answer);
-  console.log(comparate === questions[questionNumber - 1].correct_answer);
   if (normalize(comparate) === normalize(questions[questionNumber - 1].correct_answer)) {
     globalScore++;
     btnCheck.removeAttribute("id");
@@ -145,7 +141,7 @@ const startTimer = () => {
         numberQuestion(amount);
       }
       // ricomincia il timer per la nuova domanda
-      // startTimer();                                 DA RIATTIVARE
+      startTimer();
       generateQuestion(questions);
       return;
     }

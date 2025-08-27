@@ -1,12 +1,9 @@
 const score = localStorage.getItem("score");
 const numberQuestion = localStorage.getItem("numberQuestion");
-console.log(score);
-console.log(numberQuestion);
 let correctPerc = (score / numberQuestion) * 100;
-console.log(correctPerc);
 let wrongPerc = 100 - correctPerc;
 let wrongQuestion = numberQuestion - score;
-console.log(wrongPerc);
+const btnRate = document.querySelector(".btn-rate");
 // circleEl.style.background = `conic-gradient(rgba(255,255,255,0.1) 0deg ${360 - angle}deg, #00ffff ${360 - angle}deg 360deg)`;
 // background: conic-gradient(from 120deg, #00ffff 0% 66.7%, #e843c4 66.7% 100%);
 // .stats-box-circle
@@ -19,7 +16,8 @@ console.log(wrongPerc);
 
 // Gestione del circle
 const divCircle = document.querySelector(".stats-box-circle");
-divCircle.style.background = `conic-gradient(from -72deg, #00ffff 0% ${correctPerc}%, #e843c4 ${correctPerc}% ${wrongPerc}%)`;
+// divCircle.style.background = `conic-gradient(from -72deg, #00ffff 0% ${correctPerc}%, #e843c4 ${correctPerc}% ${wrongPerc}%)`;
+divCircle.style.background = `conic-gradient(from 0deg, #e843c4 0% ${wrongPerc}%,  #00ffff ${wrongPerc}% ${correctPerc}%)`;
 
 // gestione percentuale risposte corrette
 const spanCorrect = document.querySelector(".stats-box-numbers");
@@ -43,3 +41,7 @@ if (correctPerc > 60) {
   title.innerHTML = "Unfortunately!";
   subtitle.innerHTML = "You failed the exam.";
 }
+
+btnRate.addEventListener("click", () => {
+  window.location.href = "feedback.html";
+});
