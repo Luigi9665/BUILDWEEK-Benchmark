@@ -25,6 +25,8 @@ rating.addEventListener('click', (event) => {
   }
 });
 
+
+
 /* Input */
 comment.addEventListener('input', () => {
   if(comment.value.trim() === ''){
@@ -44,6 +46,10 @@ submitBtn.addEventListener('click', () => {
     newListItem.innerHTML = comment.value;
     comment.value = "";
     feedbackBtn.classList.add('no-before'); 
+    const starOver = document.querySelectorAll('.star-color');
+    starOver.forEach(star => {
+      star.classList.remove('star-color');
+    });
   }
 });
 
