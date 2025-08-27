@@ -26,7 +26,6 @@ body {
   text-align: center;
 }
 
-
 /* Welcome page */
 
 .welcome-title {
@@ -107,8 +106,6 @@ input[type="checkbox"] {
   border-radius: 25px;
   box-shadow: 0 0px 16px 13px rgba(0, 255, 255, 0.3);
 }
-
-
 
 /* Question page */
 
@@ -202,10 +199,6 @@ input[type="checkbox"] {
   font-size: 1rem;
   color: #9f1282;
 }
-/* #position-second {
-  line-height: 15px;
-  text-align: center;
-} */
 
 #timer {
   text-align: center;
@@ -215,6 +208,10 @@ input[type="checkbox"] {
   width: 112px;
   border-radius: 50%;
   background: conic-gradient(from 90deg, #00ffff 0deg 360deg, rgba(255, 255, 255, 0.1));
+  mask-image: radial-gradient(circle, transparent 55%, black 56%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
 }
 
 #timer::before {
@@ -225,13 +222,12 @@ input[type="checkbox"] {
   top: 8px;
   left: 8px;
   border-radius: 50%;
-  background-image: url("../img/bg.jpg");
-  /* background: rgba(103, 38, 116, 0.9); */
-  background-repeat: no-repeat;
-  object-fit: cover;
-  background-position: right;
 }
+
 #position-second {
+  top: -52%;
+  left: 0%;
+  text-align: center;
   padding-top: 15px;
   position: relative;
   z-index: 9999;
@@ -240,7 +236,7 @@ input[type="checkbox"] {
 
 .text-timer {
   padding-block: 5px 10px;
-  font-size: 9px;
+  font-size: 7px;
 }
 
 .second {
@@ -254,12 +250,11 @@ input[type="checkbox"] {
   margin-bottom: 3rem;
 }
 
-
 /* Results and Feedback */
 
 /* Header */
 .myheader {
-  padding: 3rem 0 ;
+  padding: 3rem 0;
   max-width: 1200px;
   margin-inline: auto;
 }
@@ -321,6 +316,10 @@ input[type="checkbox"] {
   border-radius: 50%;
   background: conic-gradient(from 120deg, #00ffff 0% 66.7%, #e843c4 66.7% 100%);
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  mask-image: radial-gradient(circle, transparent 50%, black 51%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
 }
 
 .stats-box-circle::before {
@@ -331,10 +330,10 @@ input[type="checkbox"] {
   right: 2.5rem;
   bottom: 2.5rem;
   border-radius: 50%;
-  background-image: url("../img/bg.jpg");
+  /* background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  background-position: right; */
 }
 
 /* Title description box with absolute posistion */

@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Question Page</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Question Page</title>
-</head>
-
-<body>
-  <header class="header-question">
-    <div>
-      <img class="logo" src="./assets/img/epicode_logo.png" alt="epicode_logo" />
-    </div>
-    <div id="timer">
-      <!-- simulo la creazione del timer -->
-      <div id="position-second">
-        <p class="text-timer">SECOND</p>
-        <span class="second">-</span>
-        <p class="text-timer">REMAINING</p>
+  <body>
+    <header class="header-question">
+      <div>
+        <img class="logo" src="./assets/img/epicode_logo.png" alt="epicode_logo" />
       </div>
-    </div>
-  </header>
-  <main class="container">
-    <div class="question">
-      <!-- simulo la creazione del titolo della domanda -->
-      <h1>How can I create a checkbox in HTML?</h1>
-    </div>
-    <div class="answers">
-      <!-- simulo la creazione delle risposte -->
-      <div class="answer"><button>risposta1</button></div>
-      <div class="answer"><button class="check">risposta2</button></div>
-      <div class="answer"><button>risposta3</button></div>
-      <div class="answer"><button>risposta4</button></div>
-    </div>
-    <!-- button -->
-    <div id="button-next">
-      <button class="btn-general">NEXT</button>
-    </div>
+      <div>
+        <div id="timer"></div>
+        <!-- simulo la creazione del timer -->
+        <div id="position-second">
+          <p class="text-timer">SECOND</p>
+          <span class="second">30</span>
+          <p class="text-timer">REMAINING</p>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div class="question">
+        <!-- simulo la creazione del titolo della domanda -->
+        <h1>How can I create a checkbox in HTML?</h1>
+      </div>
+      <div class="answers">
+        <!-- simulo la creazione delle risposte -->
+        <div class="answer"><button>risposta1</button></div>
+        <div class="answer"><button class="check">risposta2</button></div>
+        <div class="answer"><button>risposta3</button></div>
+        <div class="answer"><button>risposta4</button></div>
+      </div>
+      <!-- button -->
+      <div id="button-next">
+        <button class="btn-general">NEXT</button>
+      </div>
       <div id="counter-question">
         <!-- simulo la creazione del conteggio question -->
-        <p>QUESTION
+        <p>
+          QUESTION
           <span id="counter-answer"></span>
           <span id="quantity-question">/</span>
         </p>
       </div>
-  </main>
-  <script src="./assets/js/script.js"></script>
-</body>
-
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>

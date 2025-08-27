@@ -12,6 +12,7 @@ const proceed = document.querySelector(".btn-general");
 proceed.addEventListener("click", () => {
   if (checkbox.checked) {
     window.location.href = "question.html";
+    checkbox.checked = false;
   } else {
     alert("Non hai accettato i termini!");
   }
