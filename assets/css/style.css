@@ -82,21 +82,20 @@ input[type="checkbox"] {
   background-color: transparent;
 }
 
-.btn-general {
+.btn-welcome {
   font-size: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
   width: 16rem;
   height: 4rem;
-  background-color: #00ffff;
   color: #000;
   border: none;
-
   cursor: pointer;
   position: relative;
 }
 
-.btn-general::before {
+.btn-welcome::before {
+  visibility: hidden;
   content: "";
   position: absolute;
   top: 0;
@@ -105,6 +104,13 @@ input[type="checkbox"] {
   height: 100%;
   border-radius: 25px;
   box-shadow: 0 0px 16px 13px rgba(0, 255, 255, 0.3);
+}
+
+.btn-welcome.show-visibility {
+  background-color: #00ffff;
+}
+.btn-welcome.show-visibility::before {
+  visibility: visible;
 }
 
 /* Question page */
@@ -165,7 +171,7 @@ input[type="checkbox"] {
   position: absolute;
   inset: 0;
   border-radius: 60px;
-  padding: 2px;
+  padding: 4px;
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0) 100%);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;

@@ -1,13 +1,15 @@
 const checkbox = document.getElementById("promiseCheck");
-console.log(checkbox);
+const proceed = document.querySelector(".btn-welcome");
 
 checkbox.addEventListener("change", () => {
   if (checkbox.checked) {
     checkbox.classList.add("checked-native");
-  } else checkbox.classList.remove("checked-native");
+    proceed.classList.add("show-visibility");
+  } else {
+    checkbox.classList.remove("checked-native");
+    proceed.classList.remove("show-visibility");
+  }
 });
-
-const proceed = document.querySelector(".btn-general");
 
 proceed.addEventListener("click", () => {
   if (checkbox.checked) {
