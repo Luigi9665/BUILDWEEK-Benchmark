@@ -78,35 +78,20 @@ const normalize = (str) => {
 const checkCorrectAnswer = (questions) => {
   const btnCheck = document.querySelector("#check");
   const comparate = btnCheck.innerHTML;
-  if (normalize(comparate) === normalize(questions[questionNumber - 1].correct_answer)) {
-    globalScore++;
-    btnCheck.removeAttribute("id");
-    let times = 0;
-    const flashInterval = setInterval(() => {
-      btnCheck.classList.toggle("flash");
-      times++;
-      if (times === 6) {
-        // 6 toggle = 3 lampeggi
-        clearInterval(flashInterval);
-        btnCheck.classList.remove("flash"); // sicuro rimane spento
-      }
-    }, 300);
-  } else {
-    const allBtn = divAnswers.querySelectorAll("button");
-    for (let i = 0; i < allBtn.length; i++) {
-      const element = allBtn[i].innerHTML;
-      if (normalize(element) === normalize(questions[questionNumber - 1].correct_answer)) {
-        let times = 0;
-        const flashInterval = setInterval(() => {
-          allBtn[i].classList.toggle("flash");
-          times++;
-          if (times === 6) {
-            // 6 toggle = 3 lampeggi
-            clearInterval(flashInterval);
-            allBtn[i].classList.remove("flash"); // sicuro rimane spento
-          }
-        }, 300);
-      }
+  const allBtn = divAnswers.querySelectorAll("button");
+  for (let i = 0; i < allBtn.length; i++) {
+    const element = allBtn[i].innerHTML;
+    if (normalize(element) === normalize(questions[questionNumber - 1].correct_answer)) {
+      let times = 0;
+      const flashInterval = setInterval(() => {
+        allBtn[i].classList.toggle("flash");
+        times++;
+        if (times === 6) {
+          // 6 toggle = 3 lampeggi
+          clearInterval(flashInterval);
+          allBtn[i].classList.remove("flash"); // sicuro rimane spento
+        }
+      }, 300);
     }
   }
 };
