@@ -181,9 +181,14 @@ input[type="checkbox"] {
   z-index: -1;
 }
 
-.check {
+#check {
   background: #b30088;
 }
+
+.flash {
+  background-color: lightgreen !important;
+}
+
 #button-next {
   text-align: right;
 }
@@ -324,7 +329,7 @@ input[type="checkbox"] {
   height: 25rem;
   width: 25rem;
   border-radius: 50%;
-  background: conic-gradient(from 120deg, #00ffff 0% 66.7%, #e843c4 66.7% 100%);
+  /* background: conic-gradient(from 120deg, #00ffff 0% 66.7%, #e843c4 66.7% 100%); */
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
   mask-image: radial-gradient(circle, transparent 50%, black 51%);
   mask-repeat: no-repeat;
