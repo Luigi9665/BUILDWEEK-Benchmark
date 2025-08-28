@@ -166,6 +166,20 @@ fetch(url)
   })
   .catch((error) => console.error("Errore nel fetch:", error));
 
+//async/await
+//   async function loadQuestions() {
+//   try {
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     questions = data.results;
+//     numberQuestion(amount);
+//     generateQuestion(data.results);
+//     startTimer();
+//   } catch (error) {
+//     console.error("Errore nel fetch:", error);
+//   }
+// }
+
 // let difficulty = prompt("Quale difficoltà vuoi? (easy, medium, hard)");
 // controllare quante domande effettivamente esistono ed impostare un limite massimo
 // let amount = parseInt(prompt("Quante domande vuoi?"));
