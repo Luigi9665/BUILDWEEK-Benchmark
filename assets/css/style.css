@@ -181,7 +181,7 @@ input[type="checkbox"] {
   z-index: -1;
 }
 
-.check {
+#check {
   background: #b30088;
 }
 #button-next {
@@ -397,7 +397,7 @@ input[type="checkbox"] {
   color: #00ffff;
 }
 
-.star-color{
+.star-color {
   color: #00ffff;
 }
 
@@ -455,7 +455,6 @@ input[type="text"]:focus {
   display: none;
   box-shadow: none;
 }
-
 
 /* prova css per commenti */
 .comments-section {
