@@ -11,7 +11,7 @@ body {
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
   color: #fff;
 }
 
@@ -115,6 +115,64 @@ input[type="checkbox"] {
 
 /* Question page */
 
+.hidden {
+  display: none;
+}
+
+label {
+  margin-left: 10px;
+}
+
+select {
+  width: 150px;
+  font-size: 30px;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid;
+}
+
+option {
+  background-color: #0c113b;
+}
+
+input {
+  padding-left: 10px;
+  width: 60px;
+  font-size: 22px;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid;
+}
+
+.btnStart {
+  margin-top: 50px;
+}
+
+.btn-general-2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 16rem;
+  height: 4rem;
+  background-color: #00ffff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-general-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  /* box-shadow: 0 0 10px 15px rgba(0,255,255, 0.25); */
+  box-shadow: 0 0 13px 16px rgba(0, 255, 255, 0.27);
+}
+
 .header-question {
   max-width: 1200px;
   margin-inline: auto;
@@ -133,10 +191,15 @@ input[type="checkbox"] {
   line-height: 30px;
 }
 
-.question h1 {
+.question h1,
+.question h2 {
   font-size: 50px;
   font-weight: 500;
   line-height: 60px;
+}
+
+.question h2 {
+  margin-bottom: 30px;
 }
 
 .answers {
@@ -402,7 +465,7 @@ input[type="checkbox"] {
   color: #00ffff;
 }
 
-.star-color{
+.star-color {
   color: #00ffff;
 }
 
@@ -460,7 +523,6 @@ input[type="text"]:focus {
   display: none;
   box-shadow: none;
 }
-
 
 /* prova css per commenti */
 .comments-section {

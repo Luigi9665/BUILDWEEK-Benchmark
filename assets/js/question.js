@@ -4,10 +4,10 @@ let questions = [];
 let totalTime = 30; // secondi totali
 let interval;
 let remaining = totalTime; //secondi che dovranno diminuire
-let difficulty = "easy";
-let amount = 8;
+let difficulty;
+let amount = 0;
 let category = 18; // computer science / coding
-let url = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}`;
+let url;
 const divQuestion = document.querySelector(".question");
 const divAnswers = document.querySelector(".answers");
 const btnNext = document.querySelector(".btn-general");
@@ -35,7 +35,7 @@ const generateQuestion = (data) => {
   if (questionNumber >= questions.length) {
     localStorage.setItem("score", globalScore);
     localStorage.setItem("numberQuestion", questionNumber);
-    window.location.href = "results.html";
+    // window.location.href = "results.html";                                             DA RIATTIVARE
     return;
   }
   const allAnswers = randomizeAnswers(data);
@@ -77,6 +77,8 @@ const normalize = (str) => {
 // controllo risposta corretta
 const checkCorrectAnswer = (questions) => {
   const btnCheck = document.querySelector("#check");
+  // se btnCheck non esiste, esci subito
+  if (!btnCheck) return;
   const comparate = btnCheck.innerHTML;
   const allBtn = divAnswers.querySelectorAll("button");
   for (let i = 0; i < allBtn.length; i++) {
@@ -138,19 +140,94 @@ const startTimer = () => {
   }, 1000);
 };
 
+//divisione in funzioni per il module
+
+//label scelta difficoltà
+const createLabelDifficulty = () => {
+  const labelDifficulty = document.createElement("label");
+  labelDifficulty.innerText = "Difficoltà:";
+  const select = document.createElement("select");
+  select.id = "difficulty";
+  const lvlDiff = ["Easy", "Medium", "Hard"];
+  for (let i = 0; i < lvlDiff.length; i++) {
+    const element = lvlDiff[i];
+    const option = document.createElement("option");
+    option.innerText = element;
+    select.appendChild(option);
+  }
+  labelDifficulty.appendChild(select);
+  divModule.appendChild(labelDifficulty);
+};
+
+//label scelta numero domanda
+const createLabelAmount = () => {
+  const labelAmount = document.createElement("label");
+  labelAmount.innerText = "Numero di domande:";
+  const input = document.createElement("input");
+  input.id = "numQuestion";
+  input.setAttribute("type", "number");
+  input.setAttribute("min", "1");
+  input.setAttribute("max", "20");
+  input.setAttribute("value", "5");
+  labelAmount.appendChild(input);
+  divModule.appendChild(labelAmount);
+};
+
+//creazione button avvio e gestione del button
+//eliminazione del div + modifica classi
+const deleteModClass = () => {
+  divModule.remove();
+  const main = document.querySelector("main.container");
+  main.classList.remove("hidden");
+};
+
+const createBtnStart = () => {
+  const divButtonStart = document.createElement("div");
+  divButtonStart.classList.add("btnStart");
+  const btnStart = document.createElement("button");
+  btnStart.classList.add("btn-general-2");
+  btnStart.innerText = "START";
+  btnStart.addEventListener("click", () => {
+    const select = document.getElementById("difficulty");
+    const input = document.getElementById("numQuestion");
+    difficulty = select.value.toLocaleLowerCase();
+    amount = input.value;
+    url = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}`;
+    deleteModClass();
+    startFetch();
+  });
+  divButtonStart.appendChild(btnStart);
+  divModule.appendChild(divButtonStart);
+};
+
+//module scelta difficoltà e numero domande
+const divModule = document.createElement("div");
+divModule.classList.add("container", "question");
+divModule.id = "divModule";
+window.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header-question");
+  const h2 = document.createElement("h2");
+  h2.innerText = "Configura il benchmark:";
+  divModule.appendChild(h2);
+  createLabelDifficulty();
+  createLabelAmount();
+  createBtnStart();
+  header.after(divModule);
+});
+
 //utilizzare il fetch per estrapolare le domande dall'url
 // avvio del fetch per estrapolare le domande
-
-fetch(url)
-  .then((response) => response.json())
-  .then((data) => {
-    questions = data.results;
-    numberQuestion(amount);
-    generateQuestion(data.results);
-    startTimer();
-  })
-  .catch((error) => console.error("Errore nel fetch:", error));
-
+const startFetch = () => {
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      questions = data.results;
+      numberQuestion(amount);
+      generateQuestion(data.results);
+      startTimer();
+    })
+    .catch((error) => console.error("Errore nel fetch:", error));
+};
 //async/await
 //   async function loadQuestions() {
 //   try {
@@ -164,7 +241,3 @@ fetch(url)
 //     console.error("Errore nel fetch:", error);
 //   }
 // }
-
-// let difficulty = prompt("Quale difficoltà vuoi? (easy, medium, hard)");
-// controllare quante domande effettivamente esistono ed impostare un limite massimo
-// let amount = parseInt(prompt("Quante domande vuoi?"));
