@@ -54,14 +54,20 @@ comment.addEventListener("input", () => {
 /* Submit Button */
 submitBtn.addEventListener("click", () => {
   if (comment.value.trim() !== "") {
-    const newListItem = document.createElement("li");
-    commentsList.appendChild(newListItem);
-    newListItem.innerHTML = comment.value;
-    comment.value = "";
-    feedbackBtn.classList.add("no-before");
-    const starOver = document.querySelectorAll(".star-color");
-    starOver.forEach((star) => {
-      star.classList.remove("star-color");
-    });
+    // const newListItem = document.createElement("li");
+    // commentsList.appendChild(newListItem);
+    // newListItem.innerHTML = comment.value;
+
+    // inseriamo i nuovi localstorage
+    localStorage.setItem("comment", comment.value);
+    localStorage.setItem("starValue", starSelected);
+    window.location.href = "thanksgiving.html";
+
+    // comment.value = "";
+    // feedbackBtn.classList.add("no-before");
+    // const starOver = document.querySelectorAll(".star-color");
+    // starOver.forEach((star) => {
+    //   star.classList.remove("star-color");
+    // });
   }
 });

@@ -115,7 +115,7 @@ input[type="checkbox"] {
 .alertDiv {
   display: none;
   position: fixed;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 350px;
@@ -493,13 +493,9 @@ option {
   color: #757575;
   transition: color 0.2s;
 }
-/* star hover, active */
-.star.active,
-.star:hover {
-  color: #00ffff;
-}
 
-.star-color {
+.star-color,
+.star-hover {
   color: #00ffff;
 }
 
