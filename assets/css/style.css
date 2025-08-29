@@ -571,7 +571,19 @@ input[type="text"]:focus {
   margin-top: 40px;
 }
 
+.comments-container {
+  position: absolute;
+  top: 70%;
+  left: 20%;
+}
+
+#comments.list {
+  position: relative;
+}
+
 .comments-container ul {
+  font-size: 3rem;
+  text-align: left;
   list-style-type: none;
   padding: 0;
 }
@@ -583,4 +595,5 @@ input[type="text"]:focus {
   margin-bottom: 10px;
   color: #e9e5ec;
   border-radius: 4px;
+  font-size: 1rem;
 }
