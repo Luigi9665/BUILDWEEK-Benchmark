@@ -32,6 +32,7 @@ const randomizeAnswers = (data) => {
 
 //generazione della question
 const generateQuestion = (data) => {
+  console.log("Risposta giusta:", data[questionNumber].correct_answer);
   if (questionNumber >= questions.length) {
     localStorage.setItem("score", globalScore);
     localStorage.setItem("numberQuestion", questionNumber);
@@ -82,7 +83,6 @@ const checkCorrectAnswer = (questions) => {
   const comparate = btnCheck.innerHTML;
   if (normalize(comparate) === normalize(questions[questionNumber - 1].correct_answer)) {
     globalScore++;
-    console.log("globalscore", globalScore);
     btnCheck.removeAttribute("id");
     let times = 0;
     const flashInterval = setInterval(() => {

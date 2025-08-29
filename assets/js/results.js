@@ -1,7 +1,5 @@
 const score = localStorage.getItem("score");
 const numberQuestion = localStorage.getItem("numberQuestion");
-console.log(score);
-console.log(numberQuestion);
 let correctPerc = (score / numberQuestion) * 100;
 let wrongPerc = 100 - correctPerc;
 let wrongQuestion = numberQuestion - score;
