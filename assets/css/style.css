@@ -152,10 +152,12 @@ input[type="checkbox"] {
 label {
   margin-left: 10px;
 }
-
+#divModule label {
+  font-size: 2rem;
+}
 select {
   width: 150px;
-  font-size: 30px;
+  font-size: 32px;
   color: inherit;
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid #ea06f6;
@@ -169,7 +171,7 @@ option {
 #divModule input {
   padding-left: 10px;
   width: 60px;
-  font-size: 22px;
+  font-size: 25px;
   color: inherit;
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid #ea06f6;
