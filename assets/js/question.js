@@ -32,10 +32,11 @@ const randomizeAnswers = (data) => {
 
 //generazione della question
 const generateQuestion = (data) => {
+  console.log("Risposta giusta:", data[questionNumber].correct_answer);
   if (questionNumber >= questions.length) {
     localStorage.setItem("score", globalScore);
     localStorage.setItem("numberQuestion", questionNumber);
-    // window.location.href = "results.html";                                             DA RIATTIVARE
+    window.location.href = "results.html";
     return;
   }
   const allAnswers = randomizeAnswers(data);
@@ -80,20 +81,35 @@ const checkCorrectAnswer = (questions) => {
   // se btnCheck non esiste, esci subito
   if (!btnCheck) return;
   const comparate = btnCheck.innerHTML;
-  const allBtn = divAnswers.querySelectorAll("button");
-  for (let i = 0; i < allBtn.length; i++) {
-    const element = allBtn[i].innerHTML;
-    if (normalize(element) === normalize(questions[questionNumber - 1].correct_answer)) {
-      let times = 0;
-      const flashInterval = setInterval(() => {
-        allBtn[i].classList.toggle("flash");
-        times++;
-        if (times === 6) {
-          // 6 toggle = 3 lampeggi
-          clearInterval(flashInterval);
-          allBtn[i].classList.remove("flash"); // sicuro rimane spento
-        }
-      }, 300);
+  if (normalize(comparate) === normalize(questions[questionNumber - 1].correct_answer)) {
+    globalScore++;
+    btnCheck.removeAttribute("id");
+    let times = 0;
+    const flashInterval = setInterval(() => {
+      btnCheck.classList.toggle("flash");
+      times++;
+      if (times === 6) {
+        // 6 toggle = 3 lampeggi
+        clearInterval(flashInterval);
+        btnCheck.classList.remove("flash"); // sicuro rimane spento
+      }
+    }, 300);
+  } else {
+    const allBtn = divAnswers.querySelectorAll("button");
+    for (let i = 0; i < allBtn.length; i++) {
+      const element = allBtn[i].innerHTML;
+      if (normalize(element) === normalize(questions[questionNumber - 1].correct_answer)) {
+        let times = 0;
+        const flashInterval = setInterval(() => {
+          allBtn[i].classList.toggle("flash");
+          times++;
+          if (times === 6) {
+            // 6 toggle = 3 lampeggi
+            clearInterval(flashInterval);
+            allBtn[i].classList.remove("flash"); // sicuro rimane spento
+          }
+        }, 300);
+      }
     }
   }
 };
