@@ -112,7 +112,37 @@ input[type="checkbox"] {
 .btn-welcome.show-visibility::before {
   visibility: visible;
 }
+.alertDiv {
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 350px;
+  font-size: 3rem;
+  width: 500px;
+  padding-inline: 1rem;
+  padding-block: 5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 5px solid #d904f6;
+  border-radius: 20px;
+  color: #ffffff;
+  box-shadow: 0 0 90px #d904f6;
+  z-index: 1000;
+  max-width: 80%;
+  text-align: center;
+}
 
+.ghostDiv {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  display: none;
+  z-index: 900;
+  background-color: rgba(0, 0, 40, 0.5);
+}
 /* Question page */
 
 .header-question {
@@ -402,7 +432,7 @@ input[type="checkbox"] {
   color: #00ffff;
 }
 
-.star-color{
+.star-color {
   color: #00ffff;
 }
 
@@ -460,7 +490,6 @@ input[type="text"]:focus {
   display: none;
   box-shadow: none;
 }
-
 
 /* prova css per commenti */
 .comments-section {
