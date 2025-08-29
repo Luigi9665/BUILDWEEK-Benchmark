@@ -123,7 +123,7 @@ input[type="checkbox"] {
   width: 500px;
   padding-inline: 1rem;
   padding-block: 5rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
   border: 5px solid #d904f6;
   border-radius: 20px;
   color: #ffffff;

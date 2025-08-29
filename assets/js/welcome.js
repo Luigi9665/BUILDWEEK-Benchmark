@@ -16,6 +16,7 @@ proceed.addEventListener("click", () => {
     window.location.href = "question.html";
     checkbox.checked = false;
   } else {
+    divWelcome.style.visibility = "hidden";
     divAlert.style.display = "block";
     trasparentDiv.style.display = "block";
   }
@@ -26,6 +27,7 @@ const divAlert = document.createElement("div");
 document.body.appendChild(divAlert);
 divAlert.classList.add("alertDiv");
 divAlert.innerHTML = " <strong>Promise</strong>, to <strong>Proceed!</strong> ";
+const divWelcome = document.getElementById("welcome");
 
 // creo il div per il bg trasparente
 
@@ -34,6 +36,7 @@ document.body.appendChild(trasparentDiv);
 trasparentDiv.classList.add("ghostDiv");
 
 trasparentDiv.addEventListener("click", () => {
+  divWelcome.style.visibility = "visible";
   divAlert.style.display = "none";
   trasparentDiv.style.display = "none";
 });
