@@ -34,7 +34,7 @@ pWrong.innerHTML = `${wrongQuestion}/${numberQuestion} question`;
 // Gestione del testo
 const title = document.querySelector(".stats-box-title");
 const subtitle = document.querySelector(".stats-box-subtitle");
-if (correctPerc > 60) {
+if (correctPerc >= 60) {
   title.innerHTML = "Congratulations!";
   subtitle.innerHTML = "You passed the exam.";
 } else {
