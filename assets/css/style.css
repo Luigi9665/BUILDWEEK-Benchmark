@@ -164,10 +164,16 @@ input[type="checkbox"] {
 label {
   margin-left: 10px;
 }
+#divModule {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
 #divModule label {
   font-size: 2rem;
 }
 select {
+  margin-left: 15px;
   width: 150px;
   font-size: 32px;
   color: inherit;
@@ -181,6 +187,7 @@ option {
 }
 
 #divModule input {
+  margin: 0 0 0 15px;
   padding-left: 10px;
   width: 60px;
   font-size: 25px;
@@ -188,6 +195,13 @@ option {
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid #ea06f6;
   border-radius: 10px;
+}
+
+.divLabel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4rem;
 }
 
 .btnStart {

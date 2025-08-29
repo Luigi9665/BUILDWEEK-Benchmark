@@ -1,6 +1,6 @@
 const score = localStorage.getItem("score");
 const numberQuestion = localStorage.getItem("numberQuestion");
-let correctPerc = (score / numberQuestion) * 100;
+let correctPerc = ((score / numberQuestion) * 100).toFixed(1);
 let wrongPerc = 100 - correctPerc;
 let wrongQuestion = numberQuestion - score;
 const btnRate = document.querySelector(".btn-rate");

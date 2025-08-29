@@ -157,11 +157,13 @@ const startTimer = () => {
 };
 
 //divisione in funzioni per il module
+const divLabel = document.createElement("div");
+divLabel.classList.add("divLabel");
 
 //label scelta difficoltà
 const createLabelDifficulty = () => {
   const labelDifficulty = document.createElement("label");
-  labelDifficulty.innerText = "Difficoltà:";
+  labelDifficulty.innerText = "Difficulty:";
   const select = document.createElement("select");
   select.id = "difficulty";
   const lvlDiff = ["Easy", "Medium", "Hard"];
@@ -172,13 +174,14 @@ const createLabelDifficulty = () => {
     select.appendChild(option);
   }
   labelDifficulty.appendChild(select);
-  divModule.appendChild(labelDifficulty);
+  divLabel.appendChild(labelDifficulty);
+  divModule.appendChild(divLabel);
 };
 
 //label scelta numero domanda
 const createLabelAmount = () => {
   const labelAmount = document.createElement("label");
-  labelAmount.innerText = "Numero di domande:";
+  labelAmount.innerText = "Number question:";
   const input = document.createElement("input");
   input.id = "numQuestion";
   input.setAttribute("type", "number");
@@ -186,7 +189,8 @@ const createLabelAmount = () => {
   input.setAttribute("max", "20");
   input.setAttribute("value", "5");
   labelAmount.appendChild(input);
-  divModule.appendChild(labelAmount);
+  divLabel.appendChild(labelAmount);
+  divModule.appendChild(divLabel);
 };
 
 //creazione button avvio e gestione del button
