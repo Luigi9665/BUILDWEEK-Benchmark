@@ -16,6 +16,27 @@ proceed.addEventListener("click", () => {
     window.location.href = "question.html";
     checkbox.checked = false;
   } else {
-    alert("Non hai accettato i termini!");
+    divWelcome.style.visibility = "hidden";
+    divAlert.style.display = "block";
+    trasparentDiv.style.display = "block";
   }
+});
+
+// creo il div per l'allert
+const divAlert = document.createElement("div");
+document.body.appendChild(divAlert);
+divAlert.classList.add("alertDiv");
+divAlert.innerHTML = " <strong>Promise</strong>, to <strong>Proceed!</strong> ";
+const divWelcome = document.getElementById("welcome");
+
+// creo il div per il bg trasparente
+
+const trasparentDiv = document.createElement("div");
+document.body.appendChild(trasparentDiv);
+trasparentDiv.classList.add("ghostDiv");
+
+trasparentDiv.addEventListener("click", () => {
+  divWelcome.style.visibility = "visible";
+  divAlert.style.display = "none";
+  trasparentDiv.style.display = "none";
 });
