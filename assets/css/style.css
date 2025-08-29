@@ -128,7 +128,8 @@ select {
   font-size: 30px;
   color: inherit;
   background: rgba(255, 255, 255, 0.1);
-  border: 2px solid;
+  border: 2px solid #ea06f6;
+  border-radius: 10px;
 }
 
 option {
@@ -141,7 +142,8 @@ option {
   font-size: 22px;
   color: inherit;
   background: rgba(255, 255, 255, 0.1);
-  border: 2px solid;
+  border: 2px solid #ea06f6;
+  border-radius: 10px;
 }
 
 .btnStart {
