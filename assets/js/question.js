@@ -201,9 +201,12 @@ const createBtnStart = () => {
 };
 
 //module scelta difficoltà e numero domande
+// dichiarazioni delle variabili fuori la funzione per poterle richiamare
 const divModule = document.createElement("div");
 divModule.classList.add("container", "question");
 divModule.id = "divModule";
+
+// avvio della funzione al caricamento della pagina
 window.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header-question");
   const h2 = document.createElement("h2");

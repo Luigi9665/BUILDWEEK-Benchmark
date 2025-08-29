@@ -135,7 +135,7 @@ option {
   background-color: #0c113b;
 }
 
-input {
+#divModule input {
   padding-left: 10px;
   width: 60px;
   font-size: 22px;
