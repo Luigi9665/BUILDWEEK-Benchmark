@@ -120,9 +120,9 @@ input[type="checkbox"] {
   transform: translate(-50%, -50%);
   height: 350px;
   font-size: 3rem;
-  width: 500px;
+  width: 660px;
   padding-inline: 1rem;
-  padding-block: 5rem;
+  padding-block: 6rem;
   background-color: rgba(0, 0, 0, 0.1);
   border: 5px solid #d904f6;
   border-radius: 20px;
@@ -131,6 +131,18 @@ input[type="checkbox"] {
   z-index: 1000;
   max-width: 80%;
   text-align: center;
+}
+.closeBtn {
+  top: 0px;
+  position: absolute;
+  right: 10px;
+  font-size: 3rem;
+  height: 32px;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
 }
 
 .ghostDiv {

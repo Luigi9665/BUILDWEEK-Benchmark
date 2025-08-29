@@ -17,6 +17,7 @@ proceed.addEventListener("click", () => {
     checkbox.checked = false;
   } else {
     divWelcome.style.visibility = "hidden";
+    divSection.style.visibility = "hidden";
     divAlert.style.display = "block";
     trasparentDiv.style.display = "block";
   }
@@ -26,8 +27,9 @@ proceed.addEventListener("click", () => {
 const divAlert = document.createElement("div");
 document.body.appendChild(divAlert);
 divAlert.classList.add("alertDiv");
-divAlert.innerHTML = " <strong>Promise</strong>, to <strong>Proceed!</strong> ";
+divAlert.innerHTML = " <strong>Attention! click on</strong><br><strong>Promise</strong>, to <strong>Proceed!</strong> ";
 const divWelcome = document.getElementById("welcome");
+const divSection = document.querySelector(".sectionSet");
 
 // creo il div per il bg trasparente
 
@@ -36,7 +38,21 @@ document.body.appendChild(trasparentDiv);
 trasparentDiv.classList.add("ghostDiv");
 
 trasparentDiv.addEventListener("click", () => {
-  divWelcome.style.visibility = "visible";
   divAlert.style.display = "none";
+  divWelcome.style.visibility = "visible";
+  divSection.style.visibility = "visible";
   trasparentDiv.style.display = "none";
 });
+
+// costruzione e inserimento button chiusura
+
+const closeButton = document.createElement("button");
+closeButton.innerHTML = "×";
+closeButton.className = "closeBtn";
+closeButton.onclick = function () {
+  divWelcome.style.visibility = "visible";
+  divSection.style.visibility = "visible";
+  divAlert.style.display = "none";
+  trasparentDiv.style.display = "none";
+};
+divAlert.appendChild(closeButton);
